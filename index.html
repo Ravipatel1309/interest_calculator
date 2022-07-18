@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="option">
+            <div class="si active" id="si">Simple Interest</div>
+            <div class="ci" id="ci">Compound Interest</div>
+        </div>
+
+        <div class="input">
+            <div class="mg">
+                <label for="principal">Principal Amount(in ₹)<span class="red">*</span></label>
+                <input type="number" id="principal" placeholder="ex.1000">
+            </div>
+            <div class="mg">
+                <label for="rate">Interest rate<span class="red">*</span></label>
+                <input type="number" id="rate" placeholder="ex.10">
+            </div>
+            <div class="mg">
+                <label for="time">Duration (in years)<span class="red">*</span></label>
+                <input type="number" id="time" placeholder="ex.1">
+            </div>
+            <div class="mg" id="freq">
+                <label for="principal">Compounding Frequency (in years)<span class="red">*</span></label>
+                <input type="number" id="frq" placeholder="ex.3">
+            </div>
+            <div class="mg mybtn">
+                <button id="btn">Calculate</button>
+            </div>
+        </div>
+        <div class="result" id="result">
+            <p id="res"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

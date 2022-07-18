@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FAFAFA;
+}
+
+.container {
+    width: 30vw;
+    height: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4),
+        -5px -5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 0.6rem;
+    padding: 2rem;
+    font-size: 1.6rem;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: rgb(70, 179, 63, 0.6);
+    z-index: -1;
+    top: -20%;
+    left: -20%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background-color: rgb(70, 179, 63, 0.6);
+    z-index: -1;
+    bottom: -20%;
+    right: -20%;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 50%;
+    margin-bottom: 1.6rem;
+    /* flex-wrap: wrap; */
+}
+
+.option div {
+    flex-basis: 50%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 2rem;
+    box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.4),
+        -0.5px -0.5px 5px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.option div:hover {
+    box-shadow: none;
+    color: #000;
+    background-color: transparent;
+    border: 2px solid rgb(70, 179, 63);
+}
+
+div.active {
+    color: white;
+    background-color: rgb(70, 179, 63);
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.mg {
+    margin: 1rem 0;
+}
+
+input {
+    display: block;
+    width: 100%;
+    border: 0.5px solid rgba(0, 0, 0, 0.3);
+    padding: 0.6rem;
+    border-radius: 0.6rem;
+    outline-color: rgba(0, 0, 0, 0.3);
+}
+
+.mybtn {
+    text-align: center;
+}
+
+button {
+    background-color: rgb(70, 179, 63);
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+button:hover {
+    background-color: rgb(32, 110, 27);
+}
+
+.result {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.red {
+    color: rgb(185, 0, 0);
+    font-size: 2rem;
+}
+
+@media (max-width: 1280px) {
+    .container {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 998px) {
+    .container {
+        width: 70vw;
+    }
+}
+
+@media (max-width: 530px) {
+    .container {
+        width: 90vw;
+    }
+
+    body {
+        background-color: rgb(70, 179, 63);
+    }
+
+    .container::before {
+        content: '';
+        position: absolute;
+        width: 0rem;
+        height: 0rem;
+    }
+
+    .container::after {
+        content: '';
+        position: absolute;
+        width: 0rem;
+        height: 0rem;
+    }
+}
